@@ -20,3 +20,13 @@ class PostCreateView(LoginRequiredMixin,CreateView):
     def form_valid(self,form):#without a author other user cannot create a post
         form.instance.author = self.request.user
         return super().form_valid(form)    
+@login_required
+def todos_for_user(request):
+    todos = Trip.objects.filter(author=request.user)
+    travels = Trip.objects.all()
+    context = {
+          'todos' : todos,
+          'travels' : travels
+
+    }
+    return render(request, 'tra.html', context)          

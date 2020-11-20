@@ -6,6 +6,7 @@ urlpatterns = [
   
    path('dashboard/',views.dashboard,name='dashboard'),
    path('travels/',PostListView.as_view(),name='travel'),
-   path('new_post/',PostCreateView.as_view(),name ='post-create'),
+   path('post/',PostCreateView.as_view(),name ='post-create'),
+   path('travel/',views.todos_for_user,name='tra'),
  
 ]
