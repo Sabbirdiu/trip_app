@@ -1,19 +1,22 @@
-
-<div class="content-section">
-  <form action="" method="POST">
+<form action="" method="post">
     {% csrf_token %}
-    <fieldset class="form-group">
-      <legend class="border-bottom mb-4">Log in</legend>
-      {{form}}
-    </fieldset>
-    <div class="form-group">
-      <button class="btn btn-outline-info" type="submit">Log In</button>
+   <div class="form-group">
+    <label for="uname"><b>Email</b></label>   
+        <input class="input" type="text" name="username" placeholder="User Name or Email">
     </div>
-  </form>
-  <div class="border-top pt-3">
+    <div class="form-group">
+<label for="uname"><b>Password</b></label>
+        <input class="input" type="password" name="password" placeholder="Password">
+    </div>
+    <div class="form">
+    <!-- <button style="background-color: #F8694A;color: honeydew;" type="submit">Log In</button> -->
+    <button class="primary-btn" type="submit">Log In</button>
+</div> 
+</form>
+<div class="border-top pt-3">
     <small class="text-muted"
       >Need an account
+      
       <a href="{% url 'register' %}" class="ml-2">Sign Up now</a>
     </small>
   </div>
-</div>
