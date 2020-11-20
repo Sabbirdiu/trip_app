@@ -15,5 +15,7 @@ class Trip(models.Model):
     def __str__(self):
         return self.destination
     def get_absolute_url(self):
-        return reverse('travel')    
+        return reverse('travel') 
+    def get_absolute_url(self):
+        return reverse('post-detail',kwargs={'pk':self.pk})   
 

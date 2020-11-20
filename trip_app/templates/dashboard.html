@@ -1,10 +1,14 @@
 
 <h1>Wellcome {{user.username}}</h1>
 
-<h1>Edit your profile:</h1>
-<a class="nav-item nav-link" href="">Profile</a>
-<h2>Change your password</h2>
-<a class="nav-item nav-link" href=""
-  >change password</a
->
+<h1>Go to Travel List Page</h1>
+<a class="nav-item nav-link" href="{% url 'travel' %}">travel</a>
+<h2>Create a list</h2>
+<a class="nav-item nav-link" href="{% url 'post-create' %}"
+  >Create a list </a>
 
+  <h2>Logout</h2>
+  <a class="nav-item nav-link" href="{% url 'logout' %}"
+    >Create a list </a>
+  
+  

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'trip_app',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
-
+CRISPY_TEMPLATE_PACK='bootstrap4'
 
 AUTHENTICATION_BACKENDS = [ 
 'django.contrib.auth.backends.ModelBackend',
